@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  main-app:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    depends_on:
+      - "secondary-app"
+      - "grpc-app"
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+    environment:
+      HOST: 0.0.0.0
+      SECONDARY_HOST: "secondary-app"
+      GRPC_TARGET: "grpc-app"
+    env_file:
+      - .env
+    restart: on-failure
+  secondary-app:
+    build:
+      context: ./
+      dockerfile: ./secondary/Dockerfile
+    ports:
+      - "8082:8082"
+    expose:
+      - 8082
+    environment:
+      HOST: 0.0.0.0
+    env_file:
+      - ./secondary/.env
+    restart: on-failure
+  grpc-app:
+    build:
+      context: ./
+      dockerfile: ./grpc-server/Dockerfile
+    ports:
+      - "7070:7070"
+    expose:
+      - 7070
+    environment:
+      HOST: 0.0.0.0
+    env_file:
+      - ./grpc-server/.env
+    restart: on-failure
