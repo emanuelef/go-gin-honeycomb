@@ -56,11 +56,11 @@ To run all the endpoints implemented in the main app:
 
 Fome Home you will see the traces appearing at the bottom (or you can run a query)
 
-<img width="500" alt="Honeycomb Home" src="https://github.com/emanuelef/go-gin-honeycomb/assets/48717/86adce7b-332e-41e3-ba3a-720dd671c586">
+<img width="1495" alt="Honeycomb Home" src="https://github.com/emanuelef/go-gin-honeycomb/assets/48717/a3ec922d-86ef-4957-b505-e827c66c251d">
 
 Clicking on the button on the left will open the Traces view
 
-<img width="500" alt="Honecomb resty traces" src="https://github.com/emanuelef/go-gin-honeycomb/assets/48717/186a6c56-38f1-47c2-9792-fa98a20ef980">
+<img width="1491" alt="Honecomb resty traces" src="https://github.com/emanuelef/go-gin-honeycomb/assets/48717/8195eeb9-3d91-4c10-9b8a-6d221c755210">
 
 ## Code
 
