@@ -193,9 +193,9 @@ func main() {
 		span := trace.SpanFromContext(c.Request.Context())
 
 		// add events to span
-		time.Sleep(70 * time.Millisecond)
+		time.Sleep(5 * time.Millisecond)
 		span.AddEvent("Done first fake long running task")
-		time.Sleep(90 * time.Millisecond)
+		time.Sleep(5 * time.Millisecond)
 		span.AddEvent("Done second fake long running task")
 
 		span.AddEvent("log", trace.WithAttributes(
@@ -228,7 +228,7 @@ func main() {
 
 		// simulate some post processing
 		span.AddEvent("Start post processing")
-		time.Sleep(50 * time.Millisecond)
+		time.Sleep(10 * time.Millisecond)
 
 		c.JSON(resp.StatusCode(), gin.H{})
 	})
