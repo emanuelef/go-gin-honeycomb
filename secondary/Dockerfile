@@ -1,4 +1,4 @@
-FROM golang:1.21.0-alpine as builder
+FROM golang:1.21.4-alpine as builder
 WORKDIR /app
 COPY ./secondary/main.go .
 COPY ./otel_instrumentation ./otel_instrumentation
