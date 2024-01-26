@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is the repo for the Medium Article [Start using OpenTelemetry with Go Fiber](https://medium.com/@emafuma/start-using-opentelemetry-with-go-fiber-1005697d841f) adapted to Go Gin.  
+This is the repo for the Medium Article [Start using OpenTelemetry with Go Gin Web Framework](https://medium.com/@emafuma/start-using-opentelemetry-with-go-gin-web-framework-9bebca5abadc).  
 The aim is to show how to instrument with [OpenTelemetry](https://opentelemetry.io) a web server written in Go using the [Gin Web Framework](https://gin-gonic.com).  
 In order to see the traces generated [Honeycomb.io](https://www.honeycomb.io) is used as the Observability solution.
 
