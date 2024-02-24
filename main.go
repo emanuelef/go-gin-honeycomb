@@ -239,7 +239,8 @@ func main() {
 
 		conn, err := grpc.Dial(grpcTarget,
 			grpc.WithTransportCredentials(insecure.NewCredentials()),
-			grpc.WithUnaryInterceptor(otelgrpc.UnaryClientInterceptor()))
+			grpc.WithStatsHandler(otelgrpc.NewClientHandler()),
+		)
 		if err != nil {
 			log.Printf("Did not connect: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{
