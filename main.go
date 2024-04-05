@@ -237,7 +237,7 @@ func main() {
 		grpcHost := getEnv("GRPC_TARGET", "localhost")
 		grpcTarget := fmt.Sprintf("%s:7070", grpcHost)
 
-		conn, err := grpc.Dial(grpcTarget,
+		conn, err := grpc.NewClient(grpcTarget,
 			grpc.WithTransportCredentials(insecure.NewCredentials()),
 			grpc.WithStatsHandler(otelgrpc.NewClientHandler()),
 		)
